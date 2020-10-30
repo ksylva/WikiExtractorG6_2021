@@ -1,1 +1,1 @@
-#Wikipedia tables extractor
+## Wikipedia tables extractor
