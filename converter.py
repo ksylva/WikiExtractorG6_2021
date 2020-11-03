@@ -1,7 +1,7 @@
 # Convert the html tables to csv file format
 import pandas as pd
 
-chaine = """
+chaine_1 = """
 <table class="wikitable">
 <tbody><tr>
 <th>Aspect
@@ -657,21 +657,27 @@ chaine_3 = """<table class="wikitable" style="text-align:center">
 <td colspan="2">omnaquanta
 </td></tr></tbody></table>"""
 
-dict = {"Comparison_between_Esperanto_and_Ido":[chaine,chaine_2,chaine_3]}
+dict = {"Comparison_between_Esperanto_and_Ido": [chaine_1, chaine_2, chaine_3],
+        "Comparison_between_Esperanto_and_Idoss": [chaine_1, chaine_2]
+        }
 
 
 def convert_to_csv(tables):
+    print("Converter in course...")
+    # Parcours le dico
     for table_key, table_value in tables.items():
-        list_of_tables = table_value
+        list_of_tables = table_value # Une valeur du dico
+        nb_table = 1
+        # Parcours la liste de tables
         for value in list_of_tables:
-            table = value
-            dataframe = pd.read_html(table,header=0)
-            nb_table = 1
+            table = value # une table
+            dataframe = pd.read_html(table, header=0)
+            # Parcours le dataframe
             for table_df in dataframe:
-                table_df.to_csv('output/'+table_key+"_"+str(nb_table)+".csv",index=False)
-                nb_table += 1
+                table_df.to_csv('output/'+table_key+"_"+str(nb_table)+".csv", index=False)
+                nb_table = nb_table + 1 # Incrémente le nb de tables
 
 
 
-convert_to_csv(dict)
+# convert_to_csv(dict)
 
