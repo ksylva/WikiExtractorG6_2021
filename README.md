@@ -1,10 +1,10 @@
-#Scraping tables on Wikipedia (2020-2021)  
+Scraping tables on Wikipedia (2020-2021)  
 ===================
 This project is a school work intended for students in Master1 MIAGE classic of the ISTIC, University of Rennes1.
 
 **Context of the project**
 
-This work is a scaping of tables from the universal and multilingual encyclopedia, Wikipedia realized by the group6 of M1 MIAGE classic of the school year (2020-2021).
+This work is a scraping of tables from the universal and multilingual encyclopedia, Wikipedia realized by the group6 of M1 MIAGE classic of the school year (2020-2021).
  
 **Scraping Wikipedia?**
 
