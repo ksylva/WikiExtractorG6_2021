@@ -15,5 +15,3 @@ Objectives
 Make work simple and accessible to everyone with the python programming language.
 Develop scraping methods 
 Test these methods
-
-Translated with www.DeepL.com/Translator (free version)
