@@ -7,12 +7,6 @@ import requests
 import sys
 from bs4 import BeautifulSoup
 
-dict = {
-    "Comparison_between_Esperanto_and_Ido": "https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido",
-    "Comparison_between_Esperanto_and_Interlingua": "https://en.wikipedia.org/wiki"
-                                                    "/Comparison_between_Esperanto_and_Interlingua"
-}
-
 
 # Return a dictionnary of url.
 def get_urls():
@@ -20,17 +14,9 @@ def get_urls():
     urlList = {}
     with open('wikiurls.txt', "r") as wikiurls:
         for line in wikiurls:
-            # print(type(line))
-            # line.encode('latin-1', 'ignore').decode('utf-8', 'ignore')
-            # u_req.url
-            # print(type(line))
-            # l = u_parse.quote(str(line).decode("utf-8").encode("latin1"))
+            # url parsing
             l = '+'.join(u_parse.quote(n) for n in line.split())
             link = url + l
-            # req = requests.get(link)
-            # print(req.url)
-            # print(req.encoding)
-            # print(link)
             urlList.update({line: link})
     return urlList
 
@@ -46,14 +32,11 @@ def __url_state(url):
 # Take the dictonnary of url
 # test each url to verify if it's valid
 # if yes, he request the content of page
-def get_html_tables(urls):
+def get_html_tables(**urls):
     print("Tables extraction...")
     tables = {}
     for url_key, url_value in urls.items():
-        # print("URL encodee : "+url_value)
         if __url_state(url_value):
-            # print("here")
-            # url_encoded = u_parse.quote(url_value)
             html = u_req.urlopen(url_value).read().decode("utf-8")
             soup = BeautifulSoup(html, "lxml")
             list_of_tables = []
@@ -68,7 +51,7 @@ def get_html_tables(urls):
     return tables
 
 
-def get_number_of_tables_per_page(urls):
+def get_number_of_tables_per_page(**urls):
     nb_tables = {}
     for url_key, url_value in urls.items():
         html = u_req.urlopen(url_value).read().decode("utf-8")
@@ -78,8 +61,3 @@ def get_number_of_tables_per_page(urls):
 
     return nb_tables
 
-
-# get_number_of_tables_per_page(dict)
-# get_urls()
-# print(get_urls())
-# print(sys.stdin.encoding)
