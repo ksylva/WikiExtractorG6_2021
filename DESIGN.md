@@ -12,7 +12,7 @@ This project has been implemented in procedural programming according to this sc
 |   | Description | 
 | --- | --- |
 | main| Runs the programm by executing the htmlTablesExtractor and the converter |
-| URLs| Extracts the HTML tables from the Wikipedia pages and calls the CSV conversion methods |
+| URLs| List of URLs  obtained from URIs contained in wikiurl.txt |
 | htmlTablesExtractor | Method for extracting HTML tables from Wikipedia pages  |
 | Converter |Convert the table obtained from the htmlTablesExtractor to a CSV file   |
 | output| Folder containing csv files after conversion |
