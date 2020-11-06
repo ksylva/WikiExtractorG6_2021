@@ -17,7 +17,8 @@ This project has been implemented in procedural programming according to this sc
 | Converter |Convert the table obtained from the htmlTablesExtractor to a CSV file   |
 | output| Folder containing csv files after conversion |
 
-##Project operations
+
+## Project operations
 
 I. Retrieve URIs to form URLs  
 
@@ -27,6 +28,7 @@ I. Retrieve URIs to form URLs
 |---|---|
 |Comparison_between_Esperanto_and_Ido|https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido|
 |Comparison_between_Esperanto_and_Interlingua|https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Interlingua| 
+
 
 II. Browse URLs to retrieve the table(s) (html format)  
 
@@ -42,7 +44,8 @@ We use 2 libraries :
 |Comparison_between_Esperanto_and_Ido | e.g: ["\<table class="\wikitable">\</table>"\,"\<table class="\wikitable"\>\</table>\"\]|
 |Comparison_between_Esperanto_and_Interlingua | e.g: ["\<table class="wikitable">\</table>"\,<table class="\wikitable\"\>\</table>\"\] |
 
-3. Convert to CSV  
+
+III. Convert to CSV  
 
 => The conversion is done with pandas library
   
