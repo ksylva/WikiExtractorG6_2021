@@ -1,27 +1,48 @@
 # Functional aspect
 
-I. List of uri: wikiurl.txt
 
-1. Retrieve URIs to form URLs  
-2. Browse URLs to retrieve the table(s) (html format)  
-3. Convert to CSV format  
+## Global architecture
 
-1.Dictionary of urls: read the file ''wikiurls,txt'' and for each line, we will create a url.
+This project has been implemented in procedural programming according to this schema :
+
+![100% center](images/wikiExtractorG6_schema.png)
+
+## Schema Description
+
+|   | Description | 
+| --- | --- |
+| main| Runs the programm by executing the htmlTablesExtractor and the converter |
+| URLs| Extracts the HTML tables from the Wikipedia pages and calls the CSV conversion methods |
+| htmlTablesExtractor | Method for extracting HTML tables from Wikipedia pages  |
+| Converter |Convert the table obtained from the htmlTablesExtractor to a CSV file   |
+| output| Folder containing csv files after conversion |
+
+##Project operations
+
+I. Retrieve URIs to form URLs  
+
+=> Dictionary of urls: read the file ''wikiurls,txt'' and for each line, we will create a url.
 
 |Key : uri (page name)|Value : ‘’https://en...’’|
 |---|---|
 |Comparison_between_Esperanto_and_Ido|https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido|
-|Comparison_between_Esperanto_and_Interlingua|https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Interlingua|
+|Comparison_between_Esperanto_and_Interlingua|https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Interlingua| 
 
-2. Browse URLs to retrieve the table(s) (html format)  
-a- Library: urllib  
-b- Library : beautifulsoup  
-* Dictionary of tables with for key: uri and for value: list of tables in the page  
+II. Browse URLs to retrieve the table(s) (html format)  
+
+We use 2 libraries : 
+
+    a- urllib  
+    b- Library : beautifulsoup  
+    
+=> Dictionary of tables with for key: uri and for value: list of tables in the page  
 
 |Key : uri|Value: list of tables|
 |---|---|
-|Comparison_between_Esperanto_and_Ido | ["\<table class="\wikitable">\</table>"\,"\<table class="\wikitable"\>\</table>\"\]|
-|Comparison_between_Esperanto_and_Interlingua | ["\<table class="wikitable">\</table>"\,<table class="\wikitable\"\>\</table>\"\] |
+|Comparison_between_Esperanto_and_Ido | e.g: ["\<table class="\wikitable">\</table>"\,"\<table class="\wikitable"\>\</table>\"\]|
+|Comparison_between_Esperanto_and_Interlingua | e.g: ["\<table class="wikitable">\</table>"\,<table class="\wikitable\"\>\</table>\"\] |
 
 3. Convert to CSV  
-  a- Library : pandas
+
+=> The conversion is done with pandas library
+  
