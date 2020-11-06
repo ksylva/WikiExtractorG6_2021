@@ -1,4 +1,4 @@
-**Licence MIT**
+**MIT License**
 
 Copyright (c) 2020-2021 WikiExtractorG6_2021
 
