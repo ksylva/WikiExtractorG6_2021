@@ -48,7 +48,6 @@ b- Library : beautifulsoup
 
 ### Libraries
 
-We will use three libraries for this project
+We will use two libraries for this project
 - urllib.request will allow you to access the URL of the page.
 - Beautiful Soup 4 will parse the HTML.
-- The csv module integrated by default in Python allows to read and write CSV files easily.
