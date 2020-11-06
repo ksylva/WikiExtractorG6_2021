@@ -3,11 +3,12 @@ Everything is now set and you are ready to run the program.
 
 The following installation process is for IntelliJ :
 
-Requirements :
+## Requirements
 
-    IntelliJ   
+    IntelliJ IDEA with python plugin installed
+    pip install -r example-requirements.txt to install the requirements
 
-Start by opening IntelliJ and close all opened projects. Then get the project with the HTTPS link :
+* Start by opening IntelliJ and close all opened projects. Then get the project with the HTTPS link :
 
     Click "Check out from Version Control" on IntelliJ
     Select "GitHub"
@@ -16,6 +17,7 @@ Start by opening IntelliJ and close all opened projects. Then get the project wi
     Click "Clone" when you are ready
     Open the project
     Open the project panel (on the left) and right click on the "main.py" file and click on "run main".
-Authors
+    
+## Authors
 
 Sylvanus KONAN, Jean-Théodore ESSOH, Mariama TAHA, Ange SIBOMANA, Bénédicte AHOUA
