@@ -33,7 +33,7 @@ The software takes a file (wikiurl.txt) containing a list of wikipedia page titl
     
 - We only process tables marked as "class =" wikitable " ".
     
-- In the conversion to CSV, for a cell concerned by a collspan AND a rowspan at the same time, the pandas library breaks this merge and then copies the info on each row/column.
+- In the conversion to CSV, for a cell concerned by a collspan AND a rowspan at the same time, the pandas library breaks this merge and then copies the informations on each row/column.
     
 - When we have a link in a table, we keep it after conversion, Also, for each image in a table, we gather the link of the image to put it in the concerned cell (instead of the image).
     
@@ -52,11 +52,10 @@ The software takes a file (wikiurl.txt) containing a list of wikipedia page titl
 **Technologies used**
 
 - Git - The distributed version control system used.
-- IntelliJ IDEA - The IDE mainly used by our crew.
+- IntelliJ IDEA + Python plugin - The IDE mainly used by our crew.
 - Beautifulsoup - The Python-based HTML parser.
 - unitTest - The unit test framework used.
 - Pandas - python Librarie.
-- genMyModel - UML editors.
 - Word - The document editor used to create specifications.
 
 **Authors**
