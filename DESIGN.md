@@ -20,17 +20,17 @@ This project has been implemented in procedural programming according to this sc
 
 ## Project operations
 
-I. Retrieve URIs to form URLs  
+##### I. Retrieve URIs to form URLs  
 
 => Dictionary of urls: read the file ''wikiurls,txt'' and for each line, we will create a url.
 
-|Key : uri (page name)|Value : ‘’https://en...’’|
+|Key : uri (page name)|Value : url|
 |---|---|
 |Comparison_between_Esperanto_and_Ido|https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido|
 |Comparison_between_Esperanto_and_Interlingua|https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Interlingua| 
 
 
-II. Browse URLs to retrieve the table(s) (html format)  
+##### II. Browse URLs to retrieve the table(s) (in html format)  
 
 We use 2 libraries : 
 
@@ -45,7 +45,7 @@ We use 2 libraries :
 |Comparison_between_Esperanto_and_Interlingua | e.g: ["\<table class="wikitable">\</table>"\,<table class="\wikitable\"\>\</table>\"\] |
 
 
-III. Convert to CSV  
+##### III. Convert to CSV  
 
 => The conversion is done with pandas library
   

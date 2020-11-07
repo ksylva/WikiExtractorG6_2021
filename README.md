@@ -54,8 +54,8 @@ The software takes a file (wikiurl.txt) containing a list of wikipedia page titl
 - Git - The distributed version control system used.
 - IntelliJ IDEA + Python plugin - The IDE mainly used by our crew.
 - Beautifulsoup - The Python-based HTML parser.
-- unitTest - The unit test framework used.
-- Pandas - python Librarie.
+- unittest - The unit test framework used.
+- Pandas - Python library.
 - Word - The document editor used to create specifications.
 
 **Authors**

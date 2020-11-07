@@ -18,6 +18,3 @@ The following installation process is for IntelliJ :
     Open the project
     Open the project panel (on the left) and right click on the "main.py" file and click on "run main".
     
-## Authors
-
-Sylvanus KONAN, Jean-Théodore ESSOH, Mariama TAHA, Ange SIBOMANA, Bénédicte AHOUA
