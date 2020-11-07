@@ -10,7 +10,7 @@ class ConverterTest(unittest.TestCase):
         self.tables = extractor.get_html_tables(**self.urls)
 
     def test_converter_to_csv(self):
-        converter.convert_to_csv(self.tables)
+        converter.convert_to_csv(**self.tables)
         self.assertEqual(True, True)
 
 
