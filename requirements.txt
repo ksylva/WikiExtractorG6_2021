@@ -1,0 +1,9 @@
+#
+####### requirements.txt #######
+
+###### requirements with Version Specifiers ######
+#   See https://www.python.org/dev/peps/pep-0440/#version-specifiers
+coverage 5.3
+beautifulSoup4 4.8.2
+pandas 1.1.4
+#
