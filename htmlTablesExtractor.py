@@ -66,3 +66,15 @@ def get_number_of_tables_per_page(**urls):
 
     return nb_tables
 
+
+def get_number_of_tables_on_page(url):
+    """
+    Count the number of table on the page and return it if url is valid else return 0
+    :param url: url of the page
+    :return int: result of count
+    """
+    if __url_state(url):
+        page = u_req.urlopen(url).read().decode("utf-8")
+        soup = BeautifulSoup(page, "lxml")
+        return len(soup.find_all("table", "wikitable"))
+    return 0
