@@ -15,7 +15,7 @@ def get_urls():
             # url parsing
             l = '+'.join(u_parse.quote(n) for n in line.split())
             link = url + l
-            urlList.update({line: link})
+            urlList.update({l: link})
     return urlList
 
 

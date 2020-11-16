@@ -29,7 +29,7 @@ def convert_to_csv(**tables):
         nb_tables_on_page = 0
         # browse through the list
         for table in list_of_tables:
-            print("Le tableau est : {}".format(table))
+            # print("Le tableau est : {}".format(table))
             dataframe = pd.read_html(table, header=0)
             # browse through dataframe
             for table_df in dataframe:
