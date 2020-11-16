@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Convert the html tables to csv file format
 import pandas as pd
 import os

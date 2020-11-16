@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Run extractor and converter to provide the csv files
 import htmlTablesExtractor as extractor
 import converter
