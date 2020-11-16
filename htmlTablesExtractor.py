@@ -46,6 +46,8 @@ def get_html_tables(**urls):
             # update dictionary
             tables.update({url_key: list_of_tables})
             print("Tables extracted successfully")
+        else:
+            print("URL is not valid")
     # Return tables dictionary
     return tables
 
@@ -63,7 +65,8 @@ def get_number_of_tables_per_page(**urls):
             soup = BeautifulSoup(html, "lxml")
             nb_table = len(soup.find_all("table", "wikitable"))
             nb_tables.update({url_key: nb_table})
-
+        else:
+            print("URL is not valid")
     return nb_tables
 
 
@@ -77,4 +80,6 @@ def get_number_of_tables_on_page(url):
         page = u_req.urlopen(url).read().decode("utf-8")
         soup = BeautifulSoup(page, "lxml")
         return len(soup.find_all("table", "wikitable"))
+    else:
+        print("URL is not valid")
     return 0
