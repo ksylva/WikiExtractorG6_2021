@@ -14,7 +14,7 @@ class HtmlTablesExtractorTest(unittest.TestCase):
     def test_get_number_of_tables_per_page(self):
         urls = {"Comparison_of_Afrikaans_and_Dutch":"https://en.wikipedia.org/wiki/Comparison_of_Afrikaans_and_Dutch"}
         nb_tables = extractor.get_number_of_tables_per_page(**urls)
-        self.assertEqual({"Comparison_of_Afrikaans_and_Dutch":3},nb_tables,"c'est bel et bien le nombre de tables qui se trouve sur cette page")
+        self.assertEqual({"Comparison_of_Afrikaans_and_Dutch":3},nb_tables,"Generated tables does not correspond expected tables")
 
         #url = ["https://en.wikipedia.org/wiki/Comparison_of_Afrikaans_and_Dutch"]
         #value_list = [val for (k, val) in urls.items() if nb_tables == 4]
