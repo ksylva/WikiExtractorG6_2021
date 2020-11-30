@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 def get_urls():
     url = """https://en.wikipedia.org/wiki/"""
     urlList = {}
-    with open('wikiurls.txt', "r") as wikiurls:
+    with open('../wikiurls.txt', "r") as wikiurls:
         for line in wikiurls:
             # url parsing
             l = '+'.join(u_parse.quote(n) for n in line.split())
@@ -21,6 +21,13 @@ def get_urls():
 
 # Return state of url: i.e if status code equals 200 he return true and false else
 def __url_state(url):
+    try:
+        return u_req.urlopen(url).getcode() == 200
+    except u_error.URLError:
+        return False
+
+
+def url_state(url):
     try:
         return u_req.urlopen(url).getcode() == 200
     except u_error.URLError:
