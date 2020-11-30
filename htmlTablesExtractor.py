@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 def get_urls():
     url = """https://en.wikipedia.org/wiki/"""
     urlList = {}
-    with open('../wikiurls.txt', "r") as wikiurls:
+    with open('wikiurls.txt', "r") as wikiurls:
         for line in wikiurls:
             # url parsing
             l = '+'.join(u_parse.quote(n) for n in line.split())
