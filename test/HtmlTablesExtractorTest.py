@@ -1,13 +1,16 @@
 import unittest
 import htmlTablesExtractor as extractor
 
+
 class HtmlTablesExtractorTest(unittest.TestCase):
-    def __init__(self):
+
+    def __init__(self, urls):
         super().__init__()
         self.urls = extractor.get_urls()
         self.tables = extractor.get_html_tables(**self.urls)
 
     def test_urls(self):
+        # print(self)
         self.assertEqual(True, False)
 
 
