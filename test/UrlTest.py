@@ -13,7 +13,7 @@ class UrlTest(unittest.TestCase):
         urls = extractor.get_urls()
         for url_key, url_value in urls.items():
             status_code = extractor.url_state(url_value)
-            self.assertEqual(status_code, True)
+            self.assertTrue(status_code, "Invalid URL")
 
     # Test on url different from empty strings
 
