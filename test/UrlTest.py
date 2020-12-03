@@ -1,9 +1,11 @@
 import unittest
-import urllib.request as u_req
+from htmlTablesExtractor import get_urls as url
 import htmlTablesExtractor as extractor
 
 
 class UrlTest(unittest.TestCase):
+
+    url_prefix = "https://en.wikipedia.org/wiki/"
 
     #Test on valid url
 
@@ -27,6 +29,13 @@ class UrlTest(unittest.TestCase):
     #
     #             self.assertEqual(status_code, False)
     #
+
+    def test_url_prefix_valid(self):
+        for url_key, url_value in url().items():
+            prefix_pos = url_value.rindex("/")
+            prefix = url_value[:prefix_pos + 1]
+
+            self.assertEqual(prefix, self.url_prefix)
 
 
 if __name__ == '__main__':

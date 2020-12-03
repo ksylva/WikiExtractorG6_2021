@@ -3,13 +3,18 @@ import htmlTablesExtractor as extractor
 
 
 class HtmlTablesExtractorTest(unittest.TestCase):
-    #def __init__(self):
-        #super().__init__()
-        #self.urls = extractor.get_urls()
-        #self.tables = extractor.get_html_tables(**self.urls)
 
-    #def test_urls(self):
-        #self.assertEqual(True, False)
+    # def __init__(self, urls):
+    # super().__init__()
+    # self.urls = extractor.get_urls()
+    # self.tables = extractor.get_html_tables(**self.urls)
+
+    def test_urls(self):
+        # print(self)
+        self.assertEqual(True, False)
+
+    # def test_urls(self):
+    # self.assertEqual(True, False)
 
     def test_get_number_of_tables_per_page(self):
         urls = {"Comparison_of_Afrikaans_and_Dutch":"https://en.wikipedia.org/wiki/Comparison_of_Afrikaans_and_Dutch"}
