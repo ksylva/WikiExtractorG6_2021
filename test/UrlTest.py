@@ -4,10 +4,9 @@ import htmlTablesExtractor as extractor
 
 
 class UrlTest(unittest.TestCase):
-
     url_prefix = "https://en.wikipedia.org/wiki/"
 
-    #Test on valid url
+    # Test on valid url
 
     def test_urlValid(self):
         urls = extractor.get_urls()
@@ -29,6 +28,15 @@ class UrlTest(unittest.TestCase):
     #
     #             self.assertEqual(status_code, False)
     #
+
+    def test_url_invalid(self):
+        url = "htt://en.wipedia.org/ki/Yungviators"
+        self.assertEqual(False, extractor.url_state(url), "We should have an IllegalArgumentException")
+
+    def test_url_empty(self):
+        urls = extractor.get_urls()
+        for url_key, url_value in urls.items():
+            self.assertNotEqual(url_value, "", "We should have an IllegalArgumentException")
 
     def test_url_prefix_valid(self):
         for url_key, url_value in url().items():
