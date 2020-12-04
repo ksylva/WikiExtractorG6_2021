@@ -5,7 +5,6 @@ import htmlTablesExtractor as extractor
 
 
 class ConverterTest(unittest.TestCase):
-    url1 = "https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido"
 
     # def __init__(self):
     #     super().__init__()
@@ -15,9 +14,6 @@ class ConverterTest(unittest.TestCase):
     # def test_converter_to_csv(self):
     #     # converter.convert_to_csv(**self.tables)
     #     self.assertEqual(True, True)
-
-    def test_number_tables(self):
-        self.assertEqual(8, extractor.get_number_of_tables_on_page(self.url1), "Number of tables isn't correct")
 
     def test_check_nb_columns(self):
         urls = {"Comparison_of_Afrikaans_and_Dutch":"https://en.wikipedia.org/wiki/Comparison_of_Afrikaans_and_Dutch"}
