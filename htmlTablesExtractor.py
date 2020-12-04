@@ -3,6 +3,7 @@
 import urllib.request as u_req
 import urllib.error as u_error
 import urllib.parse as u_parse
+import pandas as pd
 from bs4 import BeautifulSoup
 
 
@@ -90,3 +91,13 @@ def get_number_of_tables_on_page(url):
     else:
         print("URL is not valid")
     return 0
+
+
+def get_number_of_table_cells(**get_urls):
+    exam_data = get_html_tables(**get_urls())
+    tables = exam_data.items()
+    for one_table in tables:
+        df = pd.DataFrame(data=one_table)
+        total_rows = len(df.axes[0])
+        total_cols = len(df.axes[0])
+    return total_rows*total_cols
