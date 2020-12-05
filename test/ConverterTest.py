@@ -5,26 +5,16 @@ import htmlTablesExtractor as extractor
 
 
 class ConverterTest(unittest.TestCase):
-
-    # def __init__(self):
-    #     super().__init__()
-    # self.urls = extractor.get_urls()
-    # self.tables = extractor.get_html_tables(**self.urls)
-
-    # def test_converter_to_csv(self):
-    #     # converter.convert_to_csv(**self.tables)
-    #     self.assertEqual(True, True)
-
-    def test_check_nb_columns(self):
-        urls = {"Comparison_of_Afrikaans_and_Dutch":"https://en.wikipedia.org/wiki/Comparison_of_Afrikaans_and_Dutch"}
-        table = extractor.get_html_tables(**urls)
-        dict = {"Comparison_of_Afrikaans_and_Dutch":table}
-        file = converter.convert_to_csv(**dict)
-
-        nbColumnTable = extractor.get_number_of_columns_in_the_table(table)
-        nbColumnFile = extractor.get_number_of_columns_in_the_csv(file)
-
-        self.assertEqual(nbColumnTable,nbColumnFile)
+    # def test_check_nb_columns(self):
+    #     urls = {"Comparison_of_Afrikaans_and_Dutch":"https://en.wikipedia.org/wiki/Comparison_of_Afrikaans_and_Dutch"}
+    #     table = extractor.get_html_tables(**urls)
+    #     dict = {"Comparison_of_Afrikaans_and_Dutch":table}
+    #     file = converter.convert_to_csv(**dict)
+    #
+    #     nbColumnTable = extractor.get_number_of_columns_in_the_table(table)
+    #     nbColumnFile = extractor.get_number_of_columns_in_the_csv(file)
+    #
+    #     self.assertEqual(nbColumnTable, nbColumnFile)
 
     def test_check_nb_rows(self):
         url = "https://en.wikipedia.org/wiki/Comparison_of_Afrikaans_and_Dutch"
