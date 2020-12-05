@@ -23,12 +23,12 @@ class UrlTest(unittest.TestCase):
 
     def test_url_invalid(self):
         url = "htt://en.wipedia.org/ki/Yungviators"
-        self.assertEqual(False, extractor.url_state(url), "We should have an IllegalArgumentException")
+        self.assertEqual(False, extractor.url_state(url), "We should have an invalid url")
 
     def test_url_empty(self):
         urls = extractor.get_urls()
         for url_key, url_value in urls.items():
-            self.assertNotEqual(url_value, "", "We should have an IllegalArgumentException")
+            self.assertNotEqual(url_value, "", "We should not have an empty url")
 
     def test_url_prefix_valid(self):
         for url_key, url_value in url().items():

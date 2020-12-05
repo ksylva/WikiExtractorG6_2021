@@ -1,13 +1,10 @@
 import unittest
 
-
 class CSVWitnessTest(unittest.TestCase):
+
     url_two = "https://en.wikipedia.org/wiki/Comparison_of_Afrikaans_and_Dutch"
     converted_file_two = "Comparison_of_Afrikaans_and_Dutch_3.csv"
     wanted_file_two = "Comparison_of_Afrikaans_and_Dutch_3.csv"
-
-    wanted_file_three = ""
-    converted_file_three = ""
 
     ground_truth_path = "../groundTruth/"
     extracted_path = "../output/"
@@ -16,22 +13,27 @@ class CSVWitnessTest(unittest.TestCase):
     converted_file_four = "Comparison_of_Afrikaans_and_Dutch_2.csv"
     wanted_file_four = "Comparison_of_Afrikaans_and_Dutch_2.csv"
 
+    url_three = "https://en.wikipedia.org/wiki/Comparison_between_Esperanto_and_Ido"
+    converted_file_three = "Comparison_of_Afrikaans_and_Dutch_3.csv"
+    wanted_file_three = "Comparison_of_Afrikaans_and_Dutch_3.csv"
+
     """Case : Comparison of a predefined hand-made CSV of a given table with the generated CSV of the same table
        Result : Generated CSV correspond to hand-made one"""
-
     def test_witness_two(self):
         result = self.compare_csv_files(self.wanted_file_two, self.converted_file_two)
         self.assertTrue(result, "Generated file does not correspond expected file")
 
-    def test_witness_three(self):
-        result = self.compare_csv_files(self.wanted_file_three, self.converted_file_three)
-        self.assertTrue(result, "Generated file does not correspond expected file")
-
     """Case : Comparison of a predefined hand-made CSV of a given table with the generated CSV of the same table
       Result : Generated CSV correspond to hand-made one"""
-
     def test_witness_four(self):
         result = self.compare_csv_files(self.wanted_file_four, self.converted_file_four)
+        self.assertTrue(result, "Generated file does not correspond expected file")
+
+        """Case : Comparison of a predefined hand-made CSV of a given table with the generated CSV of the same table
+      Result : Generated CSV correspond to hand-made one"""
+
+    def test_witness_three(self):
+        result = self.compare_csv_files(self.wanted_file_three, self.converted_file_three)
         self.assertTrue(result, "Generated file does not correspond expected file")
 
     def compare_csv_files(self, wanted_file, converted_file):
