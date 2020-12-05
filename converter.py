@@ -2,6 +2,7 @@
 # Convert the html tables to csv file format
 import pandas as pd
 import os
+import htmlTablesExtractor as ht
 
 
 def convert_to_csv(**tables):
@@ -41,3 +42,9 @@ def convert_to_csv(**tables):
         nb_total_table_convert += nb_tables_on_page
 
     # print("{} CSV files has been created".format(nb_total_table_convert))
+
+
+
+
+# nb = get_number_of_rows_in_the_csv("Comparison_between_Esperanto_and_Ido_1.csv")
+# print(nb)

@@ -19,15 +19,7 @@ class UrlTest(unittest.TestCase):
     def test_urlNull(self):
         urls = extractor.get_urls()
         for url_key, url_value in urls.items():
-            self.assertNotEqual(url_value, '')
-
-    # def test_urlInvalid(self):
-    #     urls = extractor.get_urls()
-    #     for url_key, url_value in urls.items():
-    #         status_code = extractor.url_state(url_value)
-    #
-    #             self.assertEqual(status_code, False)
-    #
+            self.assertNotEqual(url_value, None)
 
     def test_url_invalid(self):
         url = "htt://en.wipedia.org/ki/Yungviators"

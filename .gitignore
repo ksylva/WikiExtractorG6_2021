@@ -1,5 +1,6 @@
 /.idea/
 /output/
 /__pycache__/
+test/__pycache__/
 /venv/
 wikiurl.txt
